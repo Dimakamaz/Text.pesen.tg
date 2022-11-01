@@ -4,7 +4,7 @@ import flask
 import os
 
 server = flask.Flask(__name__)
-app_name = 'Text.pesen.tg'
+app_name = 'textpesentg'
 
 token_bot = '5764000123:AAE9g6Xdrg_iPf2vESpSJ_Hlwp6sNtXxDlA' 
 bot = telebot.TeleBot(token_bot) 
