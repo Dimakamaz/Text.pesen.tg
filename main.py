@@ -24,7 +24,7 @@ def lyrics (msg):
     bot.send_message(msg.chat.id, song.lyrics) 
  
  
-@server.route('/' + token, methods=['POST'])
+@server.route('/' + token_bot, methods=['POST'])
 def get_message():
       bot.process_new_updates([types.Update.de_json(flask.request.stream.read().decode("utf-8"))])
       return "!", 200
@@ -33,7 +33,7 @@ def get_message():
 def index():
     print("hello webhook!")
     bot.remove_webhook()
-    bot.set_webhook(url=f"https://{app_name}.herokuapp.com/{token}")
+    bot.set_webhook(url=f"https://{app_name}.herokuapp.com/{token_bot}")
     return "Hello from Heroku!", 200
 
 
