@@ -15,7 +15,7 @@ genius = lyricsgenius.Genius(token)
  
 @bot.message_handler(commands = ['start']) 
 def start(msg): 
-    bot.send_message(msg.chat.id, 'Введи название своей артиста/групы и трек через пробел.') 
+    bot.send_message(msg.chat.id, 'Введи название своего артиста/групы и трек через тире.') 
  
 @bot.message_handler(content_types=['text']) 
 def lyrics (msg): 
